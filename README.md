@@ -6,7 +6,7 @@
 
 This repo converts the [long installation guide](http://devdocs.magento.com/guides/v1.0/install-gde/bk-install-guide.html) of Magento 2 into simple Docker image to use. It uses the same convention as my [Docker image for Magento 1.x](https://github.com/alexcheng1982/docker-magento).
 
-For documentation, please refer to the Magento 1.x [repo](https://github.com/alexcheng1982/docker-magento). These two Docker images follow the same instructions. 
+For documentation, please refer to the Magento 1.x [repo](https://github.com/alexcheng1982/docker-magento). These two Docker images follow the same instructions.
 
 **Please note: this Docker image is for development and testing only, not for production use. Setting up a Magento 2 production server requires more configurations. Please refer to [official documentations](http://devdocs.magento.com/guides/v2.2/config-guide/deployment/).**
 
@@ -29,16 +29,16 @@ MYSQL_USER=magento
 MYSQL_PASSWORD=magento
 MYSQL_DATABASE=magento
 
-MAGENTO_LANGUAGE=en_GB
-MAGENTO_TIMEZONE=Pacific/Auckland
-MAGENTO_DEFAULT_CURRENCY=NZD
+MAGENTO_LANGUAGE=en_US
+MAGENTO_TIMEZONE=Asia/Singapore
+MAGENTO_DEFAULT_CURRENCY=USD
 MAGENTO_URL=http://local.magento
 
 MAGENTO_ADMIN_FIRSTNAME=Admin
 MAGENTO_ADMIN_LASTNAME=MyStore
 MAGENTO_ADMIN_EMAIL=amdin@example.com
 MAGENTO_ADMIN_USERNAME=admin
-MAGENTO_ADMIN_PASSWORD=magentorocks1
+MAGENTO_ADMIN_PASSWORD=a123456
 ~~~
 
 For example, if you want to change the default currency, just update the variable `MAGENTO_DEFAULT_CURRENCY`, e.g. `MAGENTO_DEFAULT_CURRENCY=USD`.
@@ -78,5 +78,5 @@ For development and testing in the local environment, using `localhost` as Magen
 Depends on how the container is used,
 
 * When using the GUI setup page of Magento 2, update configurations in the UI.
-* When using the script, update configurations in the `env` file. 
+* When using the script, update configurations in the `env` file.
 * When starting Magento 2 as a standalone container, use `-e` to pass environment variables.
